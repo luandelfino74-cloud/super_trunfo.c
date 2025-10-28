@@ -217,7 +217,7 @@ int main()
     printf("\n");
     printf("\n");
 
-    printf("Digite a Letra para o nome do Estado: Acre\n");
+    printf("Digite a Letra para o nome do Estado: Alagoas\n");
     scanf("%s", &estado0);
 
     printf("\n");
@@ -240,11 +240,20 @@ int main()
     printf("Digite a Área em km²:\n"); 
     scanf("%f", &area0); 
 
+    printf("\n");
+
     printf("Digite o número do PIB - Prudoto Interno Bruto:\n");
     scanf("%f" , &PIB0);
 
+    printf("\n");
+
     printf("Digite o número de Pontos Turísticos:\n");
     scanf("%d" , &pontoturistico0);
+
+    printf("\n");
+    printf("\n");
+    printf("\n");
+
 
     //=================================================================
 
@@ -270,7 +279,7 @@ int main()
     printf("\n");
     printf("\n");
 
-    printf("Digite a Letra para o nome do Estado: Alagoas\n");
+    printf("Digite a Letra para o nome do Estado: Amapá\n");
     scanf("%s", &estado1);
 
     printf("\n");
@@ -293,12 +302,20 @@ int main()
     printf("Digite a Área em km²:\n"); 
     scanf("%f", &area1); 
 
+    printf("\n");
+
     printf("Digite o número do PIB - Prudoto Interno Bruto:\n");
     scanf("%f" , &PIB1);
+
+    printf("\n");
 
     printf("Digite o número de Pontos Turísticos:\n");
     scanf("%d" , &pontoturistico1);
 
+
+    printf("\n");
+    printf("\n");
+    printf("\n");
 
     // Exibindo a carta
 
