@@ -205,8 +205,8 @@ int main()
 
     // operador de divisão para calcular densidade populacional e PIB per capita
 
-    densidadepopulacional0 = populacao0 / area0;
-    PIBpercapita0 = PIB0 / populacao0;
+    densidadepopulacional0 = (populacao0 / area0);
+    PIBpercapita0 = (PIB0 / populacao0);
 
     // Codígo de entrada de dados do usuário para a 1º CARTA
 
@@ -274,8 +274,8 @@ int main()
 
     // operador de divisão para calcular densidade populacional e PIB per capita
 
-    densidadepopulacional1 = populacao1 / area1;
-    PIBpercapita1 = PIB1 / populacao1;
+    densidadepopulacional1 = (populacao1 / area1);
+    PIBpercapita1 = (PIB1 / populacao1);
      
 
 
@@ -401,3 +401,4 @@ int main()
 
 
 }
+
