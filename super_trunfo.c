@@ -3,17 +3,14 @@
 int main()
 
 {
-    // Variaveis para a resposta de entrada do usuário para falar SIM;
     char sim[5];
     char sim2[5];
-    char sim3[15];
+      char sim3[50];
 
     printf("\n");
     printf("\n");
     printf("\n");
     printf("\n");
-
-    // Apresentação do criador e do Jogo
 
     printf("Criado por, Luan Araujo, estudante de G.T.I!!!\n");
 		
@@ -62,8 +59,6 @@ int main()
     printf("\n");
     printf("\n");
 
-    // Regras do jogo
-
     printf("COMO JOGAR!!!\n");
 
     printf("\n");
@@ -96,7 +91,6 @@ int main()
 
     printf("\n");
 
-        // Pergunta para o usuário e resposta sim
         printf("Entendeu como jogar?\n");
 
         printf("\n");
@@ -159,7 +153,6 @@ int main()
     printf("\n");
 
 
-        // Pergunta para o usuário e resposta sim
         printf("Muita informação? KKKK...\n");
 
         printf("\n");
@@ -174,14 +167,16 @@ int main()
 
     printf("\n");
     printf("\n");
-   
+    printf("\n");
+    printf("\n");
 
     printf("VAMOS INICIAR!!!\n");
 
     printf("\n");
     printf("\n");
-   
-        // Pergunta para o usuário e resposta sim
+    printf("\n");
+    printf("\n");
+
         printf("GRITAAA SIMMMM!!!! KKKK...\n");
 
         printf("\n");
@@ -205,6 +200,13 @@ int main()
     float PIB0;
     int pontoturistico0;
 
+    float densidadepopulacional0;
+    float PIBpercapita0;
+
+    // operador de divisão para calcular densidade populacional e PIB per capita
+
+    densidadepopulacional0 = populacao0 / area0;
+    PIBpercapita0 = PIB0 / populacao0;
 
     // Codígo de entrada de dados do usuário para a 1º CARTA
 
@@ -217,7 +219,7 @@ int main()
     printf("\n");
     printf("\n");
 
-    printf("Digite a Letra para o nome do Estado: Alagoas\n");
+    printf("Digite a Letra para o nome do Estado: Acre\n");
     scanf("%s", &estado0);
 
     printf("\n");
@@ -252,7 +254,7 @@ int main()
 
     printf("\n");
     printf("\n");
-    printf("\n");
+
 
 
     //=================================================================
@@ -267,6 +269,15 @@ int main()
     float PIB1;
     int pontoturistico1;
 
+    float densidadepopulacional1;
+    float PIBpercapita1;
+
+    // operador de divisão para calcular densidade populacional e PIB per capita
+
+    densidadepopulacional1 = populacao1 / area1;
+    PIBpercapita1 = PIB1 / populacao1;
+     
+
 
     // Codígo de entrada de dados do usuário para a 1º CARTA
 
@@ -279,7 +290,7 @@ int main()
     printf("\n");
     printf("\n");
 
-    printf("Digite a Letra para o nome do Estado: Amapá\n");
+    printf("Digite a Letra para o nome do Estado: Alagoas\n");
     scanf("%s", &estado1);
 
     printf("\n");
@@ -312,12 +323,11 @@ int main()
     printf("Digite o número de Pontos Turísticos:\n");
     scanf("%d" , &pontoturistico1);
 
-
-    printf("\n");
     printf("\n");
     printf("\n");
 
-    // Exibindo a carta
+
+    // Exibindo as cartas
 
     printf("------------- 1º CARTA -------------\n");
 
@@ -325,23 +335,33 @@ int main()
 
     printf("Estado: %s\n" , estado0);
     printf("\n");
+
     printf("Código da Carta: %s\n" , codcarta0); 
     printf("\n");
+
     printf("Nome da Capital: %s\n" , nomecapital0); 
     printf("\n");
+
     printf("Número da População: %d\n" , populacao0); 
     printf("\n");
-    printf("Área em km²: %f\n" , area0);
+
+    printf("Área em km²: %.2f\n" , area0);
     printf("\n");
-    printf("PIB - Prudoto Interno Bruto: %f\n" , PIB0);
+
+    printf("PIB - Prudoto Interno Bruto: %.2f\n" , PIB0);
     printf("\n");
+
     printf("Número de Pontos Turísticos: %d\n" , pontoturistico0);
+    printf("\n");
+
+    printf("Densidade Populacional: %.2f habitantes/km²\n" , densidadepopulacional0);
+    printf("\n");
+    
+    printf("PIB per Capita: %.2f\n" , PIBpercapita0);
 
     printf("\n");
     printf("\n");
-    printf("\n");
 
-    // Exibindo a carta
 
     printf("------------- 2º CARTA -------------\n");
 
@@ -349,22 +369,32 @@ int main()
 
     printf("Estado: %s\n" , estado1);
     printf("\n");
+
     printf("Código da Carta: %s\n" , codcarta1); 
     printf("\n");
+
     printf("Nome da Capital: %s\n" , nomecapital1); 
     printf("\n");
+
     printf("Número da População: %d\n" , populacao1); 
     printf("\n");
-    printf("Área em km²: %f\n" , area0);
-    printf("\n");
-    printf("PIB - Prudoto Interno Bruto: %f\n" , PIB1);
-    printf("\n");
-    printf("Número de Pontos Turísticos: %d\n" , pontoturistico1);
 
+    printf("Área em km²: %.2f\n" , area1);
     printf("\n");
+
+    printf("PIB - Prudoto Interno Bruto: %.2f\n" , PIB1);
     printf("\n");
+
+    printf("Número de Pontos Turísticos: %d\n" , pontoturistico1);
+    printf("\n");
+
+    printf("Densidade Populacional: %.2f habitantes/km²\n" , densidadepopulacional1);
+    printf("\n");
+
+    printf("PIB per Capita: %.2f\n" , PIBpercapita1);
     printf("\n");
     
+
     return 0;
 
     
