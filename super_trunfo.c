@@ -5,7 +5,7 @@ int main()
 {
     char sim[5];
     char sim2[5];
-      char sim3[50];
+    char sim3[50];
 
     printf("\n");
     printf("\n");
@@ -195,7 +195,7 @@ int main()
     char estado0[50];
     char codcarta0[50];
     char nomecapital0[50];
-    int populacao0;
+    unsigned long int populacao0;
     float area0;
     float PIB0;
     int pontoturistico0;
@@ -203,10 +203,20 @@ int main()
     float densidadepopulacional0;
     float PIBpercapita0;
 
+    float superpoder0;
+
     // operador de divisão para calcular densidade populacional e PIB per capita
 
-    densidadepopulacional0 = (populacao0 / area0);
-    PIBpercapita0 = (PIB0 / populacao0);
+    densidadepopulacional0 = (float)(populacao0) / (float)(area0);
+    PIBpercapita0 = (float)(PIB0) / (float)(populacao0);
+
+    // Cálculos da Carta 1
+    
+    densidadepopulacional0 = populacao0 / area0;
+    PIBpercapita0 = PIB0 / populacao0;
+    superpoder0 = (float)(populacao0) + (float)(area0) + (float)(PIB0) +
+                  (float)(pontoturistico0) + (float)(PIBpercapita0) +
+                  (float)(1.0 / densidadepopulacional0);
 
     // Codígo de entrada de dados do usuário para a 1º CARTA
 
@@ -272,12 +282,20 @@ int main()
     float densidadepopulacional1;
     float PIBpercapita1;
 
+    float superpoder1;
+    
     // operador de divisão para calcular densidade populacional e PIB per capita
 
-    densidadepopulacional1 = (populacao1 / area1);
-    PIBpercapita1 = (PIB1 / populacao1);
-     
+    densidadepopulacional1 = (float)(populacao1) / (float)(area1);
+    PIBpercapita1 = (float)(PIB1) / (float)(populacao1);
 
+    // Cálculos da Carta 2
+
+    densidadepopulacional1 = (float)(populacao1) / (float)(area1);
+    PIBpercapita1 = (float)(PIB1) / (float)(populacao1);
+    superpoder1 = (float)(populacao1) + (float)(area1) + (float)(PIB1) +
+                  (float)(pontoturistico1) + (float)(PIBpercapita1) +
+                  (float)(1.0 / densidadepopulacional1);
 
     // Codígo de entrada de dados do usuário para a 1º CARTA
 
@@ -393,6 +411,8 @@ int main()
 
     printf("PIB per Capita: %.2f\n" , PIBpercapita1);
     printf("\n");
+
+    
     
 
     return 0;
@@ -401,4 +421,3 @@ int main()
 
 
 }
-
