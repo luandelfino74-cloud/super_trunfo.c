@@ -2,8 +2,8 @@
 
 int main()
 {
-    char sim[3];
-    char sim2[3];
+    char sim[5];
+    char sim2[5];
     
     printf("\n\n\n\n");
     printf("Criado por, Luan Araujo, estudante de G.T.I!!!\n\n\n");
@@ -48,7 +48,7 @@ int main()
 
     printf("Entendeu como jogar?\n\n");
     printf("digite sim!!!\n");
-    scanf("%2s", sim); 
+    scanf("%4s", sim); 
 
     printf("\n\n\nINFORMAÇÕES BÁSICAS!!!\n\n");
 
@@ -66,14 +66,14 @@ int main()
     printf("Muita informação? KKKK...\n\n");
     printf("Agora que sabemos todas essas informações, podemos iniciar o Jogo?\n\n");
     printf("digite sim, para iniciar!!!\n");
-    scanf("%2s", sim2); 
+    scanf("%4s\n\n\n", sim2); 
 
 
     // Variáveis da 1ª carta
-
+    char nomeestado[20];
     char estado0[3];
     char codcarta0[5];
-    char nomecapital0[15];
+    char nomecapital0[20];
     unsigned long int populacao0;
     float area0;
     float PIB0;
@@ -87,26 +87,29 @@ int main()
     printf("Para iniciarmos o jogo, vamos criar a 1º Carta do Super Trunfo: Estados\n\n");
     printf("------------- 1º CARTA -------------\n\n");
 
-    printf("Digite a Letra para o nome do Estado: Acre\n");
-    scanf("%2s", estado0);
+    printf("Digite o nome do estado:\n\n");
+    scanf("%19s\n\n" , nomeestado);
+
+    printf("Digite a Letra para o nome do Estado:\n\n");
+    scanf("%2s\n\n", estado0);
 
     printf("Digite o Código da Carta:\n");
-    scanf("%4s", codcarta0);
+    scanf("%4s\n\n", codcarta0);
 
     printf("Digite o Nome da Capital:\n");
-    scanf("%14s", nomecapital0);
+    scanf("%19s\n\n", nomecapital0);
 
     printf("Digite o número da População:\n");
-    scanf("%lu", &populacao0);
+    scanf("%lu\n\n", &populacao0);
 
     printf("Digite a Área em km²:\n");
-    scanf("%f", &area0);
+    scanf("%f\n\n", &area0);
 
     printf("Digite o número do PIB - Prudoto Interno Bruto:\n");
-    scanf("%f", &PIB0);
+    scanf("%f\n\n", &PIB0);
 
     printf("Digite o número de Pontos Turísticos:\n");
-    scanf("%d", &pontoturistico0);
+    scanf("%d\n\n", &pontoturistico0);
 
    
     densidadepopulacional0 = populacao0 / area0;
@@ -114,13 +117,13 @@ int main()
     superpoder0 = (float)(populacao0) + (float)(area0) + (float)(PIB0) +
                   (float)(pontoturistico0) + (float)(PIBpercapita0) +
                   (float)(1.0 / densidadepopulacional0);
-
-    
+   
     // Variáveis da 2ª carta
 
-    char estado1[50];
-    char codcarta1[50];
-    char nomecapital1[50];
+    char nomeestado1[20];
+    char estado1[3];
+    char codcarta1[5];
+    char nomecapital1[20];
     int populacao1;
     float area1;
     float PIB1;
@@ -132,26 +135,29 @@ int main()
     printf("Agora que já criamos a primera carta, podemos seguir para a criação da 2º Carta do Super Trunfo: Estados\n\n");
     printf("------------- 2º CARTA -------------\n\n");
 
-    printf("Digite a Letra para o nome do Estado: Alagoas\n");
-    scanf("%49s", estado1);
+    printf("Digite o nome do estado:\n\n");
+    scanf("%19s\n\n" , nomeestado);
+
+    printf("Digite a Letra para o nome do Estado:\n");
+    scanf("%2s\n\n", estado1);
 
     printf("Digite o Código da Carta:\n");
-    scanf("%49s", codcarta1);
+    scanf("%4s\n\n", codcarta1);
 
     printf("Digite o Nome da Capital:\n");
-    scanf("%49s", nomecapital1);
+    scanf("%19s\n\n", nomecapital1);
 
     printf("Digite o número da População:\n");
-    scanf("%d", &populacao1);
+    scanf("%d\n\n", &populacao1);
 
     printf("Digite a Área em km²:\n");
-    scanf("%f", &area1);
+    scanf("%f\n\n", &area1);
 
     printf("Digite o número do PIB - Prudoto Interno Bruto:\n");
-    scanf("%f", &PIB1);
+    scanf("%f\n\n", &PIB1);
 
     printf("Digite o número de Pontos Turísticos:\n");
-    scanf("%d", &pontoturistico1);
+    scanf("%d\n\n", &pontoturistico1);
 
     
     densidadepopulacional1 = populacao1 / area1;
@@ -159,31 +165,110 @@ int main()
     superpoder1 = (float)(populacao1) + (float)(area1) + (float)(PIB1) +
                   (float)(pontoturistico1) + (float)(PIBpercapita1) +
                   (float)(1.0 / densidadepopulacional1);
+                  
+    // Exibindo a primeira carta
 
-    
-    // Exibindo as cartas
-    
     printf("------------- 1º CARTA -------------\n\n");
-    printf("Estado: %s\n", estado0);
-    printf("Código da Carta: %s\n", codcarta0);
-    printf("Nome da Capital: %s\n", nomecapital0);
-    printf("Número da População: %lu\n", populacao0);
-    printf("Área em km²: %.2f\n", area0);
-    printf("PIB - Prudoto Interno Bruto: %.2f\n", PIB0);
-    printf("Número de Pontos Turísticos: %d\n", pontoturistico0);
+    
+    printf("Código da Carta: %s\n\n", codcarta0);
+    printf("Nome da Capital: %s\n\n", nomecapital0);
+
+    printf("Número da População: %lu\n\n", populacao0);
+    if(populacao0 > populacao1)
+        printf("1º Carta Venceu!!!\n");
+        else
+            printf("2º Carta Venceu!!!\n\n");
+
+    printf("Área em km²: %.2f\n\n", area0);
+    if(area0 > area1)
+        printf("1º Carta Venceu!!!\n\n");
+        else
+            printf("2º Carta Venceu!!!\n\n");
+
+    printf("PIB - Prudoto Interno Bruto: %.2f\n\n", PIB0);
+    if(PIB0 > PIB1)
+        printf("1º Carta Venceu!!!\n\n");
+        else
+            printf("2º Carta Venceu!!!\n\n");
+
+    printf("Número de Pontos Turísticos: %d\n\n", pontoturistico0);
+    if(pontoturistico0   > pontoturistico1)
+        printf("1º Carta Venceu!!!\n\n");
+        else
+            printf("2º Carta Venceu!!!\n\n");
+
     printf("Densidade Populacional: %.2f habitantes/km²\n", densidadepopulacional0);
+    if(densidadepopulacional0 > densidadepopulacional1)
+        printf("1º Carta Venceu!!!\n\n");
+        else
+            printf("2º Carta Venceu!!!\n\n");
+
     printf("PIB per Capita: %.2f\n\n", PIBpercapita0);
+    if(PIBpercapita0 > PIBpercapita1)
+        printf("1º Carta Venceu!!!\n");
+        else
+            printf("2º Carta Venceu!!!\n\n");
+
+    printf("PIB per Capita: %.2f\n\n", superpoder0);
+    if(superpoder0 > superpoder1)
+        printf("1º Carta Venceu!!!\n");
+        else
+            printf("2º Carta Venceu!!!\n\n");
+
+
+
+    //Exibindo a segunda carta
 
     printf("------------- 2º CARTA -------------\n\n");
-    printf("Estado: %s\n", estado1);
-    printf("Código da Carta: %s\n", codcarta1);
-    printf("Nome da Capital: %s\n", nomecapital1);
-    printf("Número da População: %d\n", populacao1);
-    printf("Área em km²: %.2f\n", area1);
-    printf("PIB - Prudoto Interno Bruto: %.2f\n", PIB1);
-    printf("Número de Pontos Turísticos: %d\n", pontoturistico1);
+    
+    printf("Estado: %s\n\n", estado1);
+    printf("Código da Carta: %s\n\n", codcarta1);
+    
+     printf("Número da População: %lu\n\n", populacao1);
+    if(populacao1 > populacao0)
+        printf("2º Carta Venceu!!!\n\n");
+        else
+            printf("1º Carta Venceu!!!\n\n");
+
+    printf("Área em km²: %.2f\n\n", area1);
+    if(area1 > area0)
+        printf("2º Carta Venceu!!!\n\n");
+        else
+            printf("1º Carta Venceu!!!\n\n");
+
+    printf("PIB - Prudoto Interno Bruto: %.2f\n\n", PIB1);
+    if(PIB1 > PIB0)
+        printf("2º Carta Venceu!!!\n\n");
+        else
+            printf("1º Carta Venceu!!!\n\n");
+
+    printf("Número de Pontos Turísticos: %d\n\n", pontoturistico1);
+    if(pontoturistico1   > pontoturistico0)
+        printf("2º Carta Venceu!!!\n\n");
+        else
+            printf("1º Carta Venceu!!!\n\n");
+
     printf("Densidade Populacional: %.2f habitantes/km²\n", densidadepopulacional1);
-    printf("PIB per Capita: %.2f\n", PIBpercapita1);
+    if(densidadepopulacional1 > densidadepopulacional0)
+        printf("2º Carta Venceu!!!\n\n");
+        else
+            printf("1º Carta Venceu!!!\n\n");
+
+    printf("PIB per Capita: %.2f\n\n", PIBpercapita1);
+    if(PIBpercapita1 > PIBpercapita0)
+        printf("2º Carta Venceu!!!\n");
+        else
+            printf("1º Carta Venceu!!!\n\n");
+
+    printf("PIB per Capita: %.2f\n\n", superpoder1);
+    if(superpoder1 > superpoder0)
+        printf("2º Carta Venceu!!!\n");
+        else
+            printf("1º Carta Venceu!!!\n\n");
+
+    
+
+      
 
     return 0;
 }
